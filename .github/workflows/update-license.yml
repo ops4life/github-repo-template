@@ -55,6 +55,10 @@ jobs:
               content,
           )
 
+          if content == updated_content:
+              print(f"No changes needed in {license_file_path}. Exiting.")
+              exit(0)
+
           with open(license_file_path, "w") as file:
               file.write(updated_content)
 
@@ -69,7 +73,8 @@ jobs:
           git diff --cached
 
           if git diff-index --quiet HEAD; then
-            echo "No changes to commit."
+            echo "No changes to commit. Exiting."
+            exit 0
           else
             git commit -m "Update LICENSE with current year and username"
             git push
