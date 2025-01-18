@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.6.0](https://github.com/duyluann/github-repo-template/compare/v1.5.0...v1.6.0) (2025-01-18)
+
+
+### Features
+
+* Create update-license.yml ([#49](https://github.com/duyluann/github-repo-template/issues/49)) ([f9a2097](https://github.com/duyluann/github-repo-template/commit/f9a20972eb53fa7c9e74c0430f86eca15538e895))
+
 # [1.5.0](https://github.com/duyluann/github-repo-template/compare/v1.4.0...v1.5.0) (2024-09-22)
 
 
