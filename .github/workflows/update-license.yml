@@ -65,10 +65,12 @@ jobs:
               print(f"Updated {license_file_path} with current year and username.")
               return True
 
-          if update_license():
-              print("Changes have been made to the license file.")
-          else:
-              print("No changes were necessary.")
+          # Update the license file and return if changes were made
+          changes_made = update_license()
+
+          # Use the new method to set outputs
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as github_output:
+              github_output.write(f"changes={'true' if changes_made else 'false'}\n")
           EOF
 
       - name: Commit changes
