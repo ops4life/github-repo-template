@@ -87,6 +87,7 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           branch: update-license-${{ github.run_id }}
+          base: main
           title: "chore: Update LICENSE with current year and username"
           body: |
             This pull request updates the LICENSE file to reflect the current year and username.
