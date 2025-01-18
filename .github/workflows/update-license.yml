@@ -7,7 +7,7 @@ on:
 
 jobs:
   update-license:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
@@ -19,6 +19,7 @@ jobs:
           python-version: '3.x'
 
       - name: Update LICENSE or LICENSE.md
+        id: update-license
         env:
           GITHUB_ACTOR: ${{ github.actor }}
         run: |
@@ -65,17 +66,20 @@ jobs:
           print(f"Updated {license_file_path} with current year and username.")
           EOF
 
-      - name: Commit and push changes
+      - name: Commit changes
         run: |
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git checkout -b update-license-${{ github.run_id }}
           git add LICENSE LICENSE.md 2>/dev/null || true
-          git diff --cached
+          git commit -m "Update LICENSE with current year and username"
 
-          if git diff-index --quiet HEAD; then
-            echo "No changes to commit. Exiting."
-            exit 0
-          else
-            git commit -m "Update LICENSE with current year and username"
-            git push
-          fi
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          branch: update-license-${{ github.run_id }}
+          title: "Update LICENSE with current year and username"
+          body: |
+            This PR updates the LICENSE file to include the current year and the username of the contributor.
+          labels: |
+            automated-update
