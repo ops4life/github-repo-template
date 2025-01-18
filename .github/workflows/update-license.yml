@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Update LICENSE or LICENSE.md
+      - name: Run Python Script to Update LICENSE
         id: update-license
         env:
           GITHUB_ACTOR: ${{ github.actor }}
@@ -28,45 +28,51 @@ jobs:
           import re
           from datetime import datetime
 
-          # Variables
-          current_year = datetime.now().year
-          username = os.getenv("GITHUB_ACTOR")  # Automatically retrieves the username of the actor
+          def update_license():
+              # Variables
+              current_year = datetime.now().year
+              username = os.getenv("GITHUB_ACTOR", "unknown-user")
+              license_files = ["LICENSE", "LICENSE.md"]
+              license_file_path = None
 
-          # Determine which file to update
-          license_files = ["LICENSE", "LICENSE.md"]
-          license_file_path = None
+              # Find the license file
+              for file in license_files:
+                  if os.path.exists(file):
+                      license_file_path = file
+                      break
 
-          for file in license_files:
-              if os.path.exists(file):
-                  license_file_path = file
-                  break
+              if not license_file_path:
+                  print("No LICENSE or LICENSE.md file found. Exiting.")
+                  return False
 
-          if license_file_path is None:
-              print("No LICENSE or LICENSE.md file found. Exiting.")
-              exit(0)
+              # Read and update the license file
+              with open(license_file_path, "r") as file:
+                  content = file.read()
 
-          # Read, update, and write the LICENSE file
-          with open(license_file_path, "r") as file:
-              content = file.read()
+              updated_content = re.sub(
+                  r"Copyright \(c\) .*",
+                  f"Copyright (c) {current_year} {username}",
+                  content,
+              )
 
-          # Replace the copyright line
-          updated_content = re.sub(
-              r"Copyright \\(c\\) \\d{4} .*",
-              f"Copyright (c) {current_year} {username}",
-              content,
-          )
+              if content == updated_content:
+                  print(f"No changes needed in {license_file_path}.")
+                  return False
 
-          if content == updated_content:
-              print(f"No changes needed in {license_file_path}. Exiting.")
-              exit(0)
+              with open(license_file_path, "w") as file:
+                  file.write(updated_content)
 
-          with open(license_file_path, "w") as file:
-              file.write(updated_content)
+              print(f"Updated {license_file_path} with current year and username.")
+              return True
 
-          print(f"Updated {license_file_path} with current year and username.")
+          if update_license():
+              print("Changes have been made to the license file.")
+          else:
+              print("No changes were necessary.")
           EOF
 
       - name: Commit changes
+        if: steps.update-license.outputs.changes == 'true'
         run: |
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
@@ -75,11 +81,11 @@ jobs:
           git commit -m "Update LICENSE with current year and username"
 
       - name: Create Pull Request
+        if: steps.update-license.outputs.changes == 'true'
         uses: peter-evans/create-pull-request@v5
         with:
           branch: update-license-${{ github.run_id }}
-          title: "Update LICENSE with current year and username"
+          title: "chore: Update LICENSE with current year and username"
           body: |
-            This PR updates the LICENSE file to include the current year and the username of the contributor.
-          labels: |
-            automated-update
+            This pull request updates the LICENSE file to reflect the current year and username.
+          labels: automated-update
