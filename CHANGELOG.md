@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.7.0](https://github.com/duyluann/github-repo-template/compare/v1.6.0...v1.7.0) (2025-01-18)
+
+
+### Features
+
+* update license workflow ([5fa7133](https://github.com/duyluann/github-repo-template/commit/5fa713339b0839a06196eaae39c4e8db636c799d))
+
 # [1.6.0](https://github.com/duyluann/github-repo-template/compare/v1.5.0...v1.6.0) (2025-01-18)
 
 
