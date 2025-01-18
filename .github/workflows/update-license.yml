@@ -79,7 +79,7 @@ jobs:
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
           git checkout -b update-license-${{ github.run_id }}
-          git add LICENSE LICENSE.md --force
+          git add .
           git commit -m "Update LICENSE with current year and username"
 
       - name: Create Pull Request
