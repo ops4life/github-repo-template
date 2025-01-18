@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.10.0](https://github.com/duyluann/github-repo-template/compare/v1.9.0...v1.10.0) (2025-01-18)
+
+
+### Features
+
+* update license workflow ([acbc44c](https://github.com/duyluann/github-repo-template/commit/acbc44cbfe9bc9f4ed0d06d6d8c9256b31e73960))
+
 # [1.9.0](https://github.com/duyluann/github-repo-template/compare/v1.8.0...v1.9.0) (2025-01-18)
 
 
