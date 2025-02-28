@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.11.0](https://github.com/duyluann/github-repo-template/compare/v1.10.0...v1.11.0) (2025-02-28)
+
+
+### Features
+
+* Create automerge-dependabot.yml ([1cf61ba](https://github.com/duyluann/github-repo-template/commit/1cf61ba23887cf5273da3771cde972ea57c2bb1a))
+
 # [1.10.0](https://github.com/duyluann/github-repo-template/compare/v1.9.0...v1.10.0) (2025-01-18)
 
 
