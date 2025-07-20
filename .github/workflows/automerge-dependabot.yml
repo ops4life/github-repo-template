@@ -1,4 +1,4 @@
-name: Auto-merge Dependabot
+name: Auto-merge PR
 
 on: pull_request
 
@@ -9,7 +9,12 @@ permissions:
 jobs:
   automerge:
     runs-on: ubuntu-latest
-    if: github.actor == 'dependabot[bot]'
+    if: |
+      github.actor == 'github-actions[bot]' &&
+      (
+        startsWith(github.head_ref, 'update-license-') ||
+        github.head_ref == 'update-pre-commit-hooks'
+      )
     steps:
       - uses: peter-evans/enable-pull-request-automerge@v3
         with:
