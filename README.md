@@ -14,6 +14,7 @@ Welcome to the Template Repository on GitHub! This repository is designed to ser
 │   ├── pull_request_template.md        # 📝 Pull request template
 │   └── workflows                       # ⚙️ GitHub Actions workflows
 │       ├── deps-review.yaml            # 📋 Dependency review workflow
+│       ├── gitleaks.yaml               # 🔒 Secret scanning workflow
 │       ├── lint-pr.yaml                # 🧹 Linting workflow for pull requests
 │       ├── pre-commit-auto-update.yaml # 🔄 Pre-commit hook auto-update workflow
 │       ├── release.yaml                # 🚀 Release workflow
@@ -22,6 +23,7 @@ Welcome to the Template Repository on GitHub! This repository is designed to ser
 ├── .gitignore                          # 🚫 Files and directories to be ignored by Git
 ├── .pre-commit-config.yaml             # 🛠️ Pre-commit hooks configuration
 ├── .releaserc.json                     # 🚀 Semantic release configuration
+├── .gitleaks.toml                      # 🔒 Gitleaks secret scanning configuration
 ├── .vscode                             # 🖥️ VSCode-specific configurations
 │   └── extensions.json                 # 🛠️ Recommended extensions for VSCode
 ├── CHANGELOG.md                        # 📝 Change log of the project
@@ -54,9 +56,40 @@ Optional: The part of the codebase affected by the change (e.g., `feat(auth): ad
 
 A brief description of the change, using the imperative mood (e.g., `fix: resolve issue with user authentication`).
 
-## 🚀 Semantic Release
+## 🔒 Secret Scanning with Gitleaks
 
-This project is configured with [Semantic Release](https://semantic-release.gitbook.io/semantic-release) to automate the release process based on your commit messages.
+This project uses [Gitleaks](https://github.com/gitleaks/gitleaks) to detect secrets and sensitive information in the codebase. Gitleaks is configured to run both locally via pre-commit hooks and in CI/CD pipelines.
+
+### Local Development
+
+Gitleaks runs automatically as a pre-commit hook. To install the pre-commit hooks:
+
+```bash
+pre-commit install
+```
+
+To run Gitleaks manually:
+
+```bash
+pre-commit run gitleaks --all-files
+```
+
+### CI/CD Integration
+
+Gitleaks runs automatically on:
+- Pull requests to main/master branch
+- Pushes to main/master branch
+
+The workflow will fail if any secrets are detected, helping prevent accidental exposure of sensitive information.
+
+### Configuration
+
+The `.gitleaks.toml` file contains:
+- Allowlist patterns for false positives
+- Custom scanning rules
+- Output configuration
+
+## 🚀 Semantic Release
 
 ### How It Works
 
