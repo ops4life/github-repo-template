@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.12.0](https://github.com/duyluann/github-repo-template/compare/v1.11.0...v1.12.0) (2025-08-09)
+
+
+### Features
+
+* add Gitleaks configuration and workflows for secret scanning ([#55](https://github.com/duyluann/github-repo-template/issues/55)) ([cdbffc1](https://github.com/duyluann/github-repo-template/commit/cdbffc16246bbc31af5e0f6b057d6a8a54a44b21))
+
 # [1.11.0](https://github.com/duyluann/github-repo-template/compare/v1.10.0...v1.11.0) (2025-02-28)
 
 
