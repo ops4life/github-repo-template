@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.12.1](https://github.com/duyluann/github-repo-template/compare/v1.12.0...v1.12.1) (2025-08-13)
+
+
+### Bug Fixes
+
+* correct conditional logic for auto-merge PRs ([#59](https://github.com/duyluann/github-repo-template/issues/59)) ([2a4c9b9](https://github.com/duyluann/github-repo-template/commit/2a4c9b927dc113193164eeedc832a1685bec8988))
+
 # [1.12.0](https://github.com/duyluann/github-repo-template/compare/v1.11.0...v1.12.0) (2025-08-09)
 
 
