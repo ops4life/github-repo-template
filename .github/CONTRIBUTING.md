@@ -19,12 +19,14 @@ Thank you for your interest in contributing to this project! This document provi
    - This creates a copy of the repository in your GitHub account
 
 2. **Clone Your Fork**
+
    ```bash
    git clone https://github.com/YOUR-USERNAME/REPOSITORY-NAME.git
    cd REPOSITORY-NAME
    ```
 
 3. **Add Upstream Remote**
+
    ```bash
    git remote add upstream https://github.com/ORIGINAL-OWNER/REPOSITORY-NAME.git
    ```
@@ -32,16 +34,19 @@ Thank you for your interest in contributing to this project! This document provi
 ## Development Setup
 
 1. **Install Pre-commit Hooks** (Required)
+
    ```bash
    pre-commit install
    ```
 
 2. **Verify Installation**
+
    ```bash
    pre-commit run --all-files
    ```
 
 3. **Create a Feature Branch**
+
    ```bash
    git checkout -b feat/your-feature-name
    ```
@@ -49,6 +54,7 @@ Thank you for your interest in contributing to this project! This document provi
 ## Contribution Workflow
 
 1. **Keep Your Fork Updated**
+
    ```bash
    git fetch upstream
    git checkout main
@@ -62,6 +68,7 @@ Thank you for your interest in contributing to this project! This document provi
    - Update documentation as needed
 
 3. **Test Your Changes**
+
    ```bash
    # Run pre-commit hooks
    pre-commit run --all-files
@@ -76,6 +83,7 @@ Thank you for your interest in contributing to this project! This document provi
    - Each commit should represent a single logical change
 
 5. **Push to Your Fork**
+
    ```bash
    git push origin feat/your-feature-name
    ```
@@ -200,6 +208,7 @@ Follow the coding conventions for each language:
 ### Enforcement
 
 Violations may result in:
+
 1. Warning from maintainers
 2. Temporary or permanent ban from the project
 3. Reporting to GitHub

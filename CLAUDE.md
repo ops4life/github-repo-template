@@ -37,6 +37,7 @@ After implementing changes, create a pull request for review. The main branch is
 **Allowed Types:** `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, `ci`, `revert`
 
 **Validation Rules (enforced by CI):**
+
 - Subject must start with alphabetic character
 - Scope is optional
 - Use imperative mood ("add feature" not "added feature")
@@ -45,16 +46,19 @@ After implementing changes, create a pull request for review. The main branch is
 ## Development Commands
 
 **Install pre-commit hooks (required before first commit):**
+
 ```bash
 pre-commit install
 ```
 
 **Run all hooks manually:**
+
 ```bash
 pre-commit run --all-files
 ```
 
 **Run specific hook:**
+
 ```bash
 pre-commit run gitleaks --all-files
 ```
@@ -71,6 +75,7 @@ pre-commit run gitleaks --all-files
 **Runs:** Pre-commit hook + CI on PRs/pushes to main/master
 
 **Allowlisted (`.gitleaks.toml`):**
+
 - Documentation files: `*.md`, `*.txt`, `*.rst`, `LICENSE`, `CHANGELOG.md`
 - Example secrets in docs (e.g., `AKIA[0-9A-Z]{16}`, `ghp_[0-9a-zA-Z]{36}`, test passwords)
 
@@ -81,6 +86,7 @@ pre-commit run gitleaks --all-files
 **Trigger:** Pushes to main branch (or manual workflow_dispatch)
 
 **Version Bumping:**
+
 - `fix` → Patch (1.0.x)
 - `feat` → Minor (1.x.0)
 - `BREAKING CHANGE` in body → Major (x.0.0)
