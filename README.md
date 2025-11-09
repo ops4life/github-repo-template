@@ -7,31 +7,49 @@ Welcome to the Template Repository on GitHub! This repository is designed to ser
 ```text
 .
 ├── .editorconfig                       # 🖊️ Configuration for consistent coding styles
+├── .gitattributes                      # 📋 Git attributes configuration
 ├── .github                             # 🛠️ GitHub-specific configurations
-│   ├── ISSUE_TEMPLATE                  # 📝 GitHub issue template
-│   │   └── issue_template.md           # 📝 Issue template file
+│   ├── CONTRIBUTING.md                 # 🤝 Contribution guidelines
+│   ├── ISSUE_TEMPLATE                  # 📝 GitHub issue templates
+│   │   ├── bug_report.md               # 🐛 Bug report template
+│   │   ├── config.yml                  # ⚙️ Issue template configuration
+│   │   ├── documentation.md            # 📚 Documentation issue template
+│   │   ├── feature_request.md          # ✨ Feature request template
+│   │   └── issue_template.md           # 📝 General issue template
+│   ├── SECURITY.md                     # 🔒 Security policy and vulnerability reporting
 │   ├── dependabot.yml                  # 🤖 Dependabot configuration
 │   ├── pull_request_template.md        # 📝 Pull request template
 │   └── workflows                       # ⚙️ GitHub Actions workflows
+│       ├── automerge.yml               # 🔀 Auto-merge workflow for dependabot PRs
+│       ├── cleanup-caches.yaml         # 🧹 Cleanup old workflow caches
+│       ├── codeql.yaml                 # 🔍 CodeQL security analysis workflow
 │       ├── deps-review.yaml            # 📋 Dependency review workflow
 │       ├── gitleaks.yaml               # 🔒 Secret scanning workflow
 │       ├── lint-pr.yaml                # 🧹 Linting workflow for pull requests
 │       ├── pre-commit-auto-update.yaml # 🔄 Pre-commit hook auto-update workflow
+│       ├── pre-commit-ci.yaml          # ✅ Pre-commit CI workflow
 │       ├── release.yaml                # 🚀 Release workflow
 │       ├── stale.yaml                  # ⏳ Stale issue management workflow
-│       └── template-repo-sync.yaml     # 🔄 Template repository sync workflow
+│       ├── template-repo-sync.yaml     # 🔄 Template repository sync workflow
+│       └── update-license.yml          # 📄 License year update workflow
 ├── .gitignore                          # 🚫 Files and directories to be ignored by Git
+├── .gitleaks.toml                      # 🔒 Gitleaks secret scanning configuration
 ├── .pre-commit-config.yaml             # 🛠️ Pre-commit hooks configuration
 ├── .releaserc.json                     # 🚀 Semantic release configuration
-├── .gitleaks.toml                      # 🔒 Gitleaks secret scanning configuration
+├── .templatesyncignore                 # 🔄 Template sync ignore patterns
 ├── .vscode                             # 🖥️ VSCode-specific configurations
-│   └── extensions.json                 # 🛠️ Recommended extensions for VSCode
+│   ├── extensions.json                 # 🛠️ Recommended extensions for VSCode
+│   └── settings.json                   # ⚙️ VSCode settings
+├── .yamllint                           # 📝 YAML linting configuration
 ├── CHANGELOG.md                        # 📝 Change log of the project
+├── CLAUDE.md                           # 🤖 Claude Code instructions
 ├── CODEOWNERS                          # 👥 Defines the code owners for the repository
 ├── LICENSE                             # ⚖️ License for the project
 └── README.md                           # 📖 Project documentation (this file)
 ```
+
 ## ⚙️ Semantic Commit Messages
+
 This project uses [Semantic Commit Messages](https://www.conventionalcommits.org/) to ensure meaningful and consistent commit history. The format is as follows:
 
 ```php
@@ -77,6 +95,7 @@ pre-commit run gitleaks --all-files
 ### CI/CD Integration
 
 Gitleaks runs automatically on:
+
 - Pull requests to main/master branch
 - Pushes to main/master branch
 
@@ -85,9 +104,44 @@ The workflow will fail if any secrets are detected, helping prevent accidental e
 ### Configuration
 
 The `.gitleaks.toml` file contains:
+
 - Allowlist patterns for false positives
 - Custom scanning rules
 - Output configuration
+
+## 🔍 CodeQL Security Analysis
+
+This project uses [GitHub CodeQL](https://codeql.github.com/) to perform advanced security analysis and detect vulnerabilities in the codebase. CodeQL is configured to analyze JavaScript and Python code by default.
+
+### When It Runs
+
+CodeQL analysis runs automatically on:
+
+- Pull requests to main/master branch
+- Pushes to main/master branch
+- Weekly schedule (every Monday at 00:00 UTC)
+
+### Language Detection
+
+The workflow is configured with `continue-on-error: true`, which means:
+
+- If a specified language (JavaScript or Python) is not detected in the repository, the workflow will not fail
+- This is useful for template repositories where different projects may use different languages
+- Analysis will still run for any languages that are present
+
+### Customization
+
+To customize the languages analyzed, edit `.github/workflows/codeql.yaml`:
+
+```yaml
+matrix:
+  language: [ 'javascript', 'python' ]
+  # Supported: 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby', 'swift'
+```
+
+### Security Alerts
+
+Security vulnerabilities detected by CodeQL are reported in the Security tab of your repository under "Code scanning alerts".
 
 ## 🚀 Semantic Release
 
@@ -95,9 +149,9 @@ The `.gitleaks.toml` file contains:
 
 1. Analyze commits: Semantic Release inspects commit messages to determine the type of changes in the codebase.
 2. Generate release version: Based on the commit type, it will automatically bump the version following semantic versioning:
-- fix → Patch release (e.g., 1.0.1)
-- feat → Minor release (e.g., 1.1.0)
-- BREAKING CHANGE → Major release (e.g., 2.0.0)
+   - fix → Patch release (e.g., 1.0.1)
+   - feat → Minor release (e.g., 1.1.0)
+   - BREAKING CHANGE → Major release (e.g., 2.0.0)
 3. Create release notes: It generates a changelog from the commit messages and includes it in the release.
 4. Publish: It automatically publishes the new version to the repository (and any other configured registries, e.g., npm).
 
