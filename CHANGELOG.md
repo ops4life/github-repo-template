@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.13.0](https://github.com/duyluann/github-repo-template/compare/v1.12.1...v1.13.0) (2025-11-09)
+
+
+### Features
+
+* optimize repository template ([#67](https://github.com/duyluann/github-repo-template/issues/67)) ([d538ed7](https://github.com/duyluann/github-repo-template/commit/d538ed77ba165d77e3e26aeb6566f8929dfdcafb))
+
 ## [1.12.1](https://github.com/duyluann/github-repo-template/compare/v1.12.0...v1.12.1) (2025-08-13)
 
 
