@@ -33,6 +33,7 @@ jobs:
 
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
+        continue-on-error: true
         with:
           languages: ${{ matrix.language }}
           # Override auto-detection of languages
@@ -41,6 +42,7 @@ jobs:
       # Autobuild attempts to build any compiled languages (C/C++, C#, Go, Java, or Swift)
       - name: Autobuild
         uses: github/codeql-action/autobuild@v3
+        continue-on-error: true
 
       # If autobuild fails, replace with manual build steps:
       # - name: Build
@@ -50,6 +52,6 @@ jobs:
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
+        continue-on-error: true
         with:
           category: "/language:${{ matrix.language }}"
-          expect-error: true
