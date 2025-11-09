@@ -18,7 +18,6 @@ jobs:
   analyze:
     name: Analyze Code
     runs-on: ubuntu-24.04
-    continue-on-error: true  # Don't fail workflow if language detection fails
 
     strategy:
       fail-fast: false
@@ -53,3 +52,4 @@ jobs:
         uses: github/codeql-action/analyze@v3
         with:
           category: "/language:${{ matrix.language }}"
+          expected-error: true
