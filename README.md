@@ -42,7 +42,6 @@ Welcome to the Template Repository on GitHub! This repository is designed to ser
 │   └── settings.json                   # ⚙️ VSCode settings
 ├── .yamllint                           # 📝 YAML linting configuration
 ├── CHANGELOG.md                        # 📝 Change log of the project
-├── CLAUDE.md                           # 🤖 Claude Code instructions
 ├── CODEOWNERS                          # 👥 Defines the code owners for the repository
 ├── LICENSE                             # ⚖️ License for the project
 └── README.md                           # 📖 Project documentation (this file)
