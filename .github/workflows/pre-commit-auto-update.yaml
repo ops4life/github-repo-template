@@ -39,6 +39,7 @@ jobs:
         if: steps.check_changes.outputs.changes == 'true'
         uses: peter-evans/create-pull-request@v8
         with:
+          token: ${{ secrets.WORKFLOW_TOKEN }}
           commit-message: 'chore: Update pre-commit hooks'
           committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
