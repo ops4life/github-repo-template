@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.13.1](https://github.com/duyluann/github-repo-template/compare/v1.13.0...v1.13.1) (2026-01-12)
+
+
+### Bug Fixes
+
+* Correct yamllint indentation errors ([4e00d79](https://github.com/duyluann/github-repo-template/commit/4e00d79110db796f8e3833076be0c3f8f8f9e7f6))
+
 # [1.13.0](https://github.com/duyluann/github-repo-template/compare/v1.12.1...v1.13.0) (2025-11-09)
 
 
