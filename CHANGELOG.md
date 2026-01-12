@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.13.2](https://github.com/duyluann/github-repo-template/compare/v1.13.1...v1.13.2) (2026-01-12)
+
+
+### Bug Fixes
+
+* Update gitleaks.yaml ([c04fd31](https://github.com/duyluann/github-repo-template/commit/c04fd31df8a2500656cd90a430286e9e8fcf4160))
+
 ## [1.13.1](https://github.com/duyluann/github-repo-template/compare/v1.13.0...v1.13.1) (2026-01-12)
 
 
