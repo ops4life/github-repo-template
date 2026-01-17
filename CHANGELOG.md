@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.14.0](https://github.com/ops4life/github-repo-template/compare/v1.13.2...v1.14.0) (2026-01-17)
+
+
+### Bug Fixes
+
+* Allow automerge for branch patterns regardless of actor ([#84](https://github.com/ops4life/github-repo-template/issues/84)) ([5ee45ef](https://github.com/ops4life/github-repo-template/commit/5ee45efc536b2b12da4cc8c6841d2274416cab83))
+
+
+### Features
+
+* Change license update script to use repo owner ([956ca67](https://github.com/ops4life/github-repo-template/commit/956ca673fb22bc3f50e40554c1217578a0ab9cdc))
+
 ## [1.13.2](https://github.com/duyluann/github-repo-template/compare/v1.13.1...v1.13.2) (2026-01-12)
 
 
