@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.15.0](https://github.com/ops4life/github-repo-template/compare/v1.14.0...v1.15.0) (2026-01-23)
+
+
+### Features
+
+* Update template-repo-sync.yaml ([bc814fe](https://github.com/ops4life/github-repo-template/commit/bc814fe3f1c64ecf296c871740c0e44dc499c961))
+
 # [1.14.0](https://github.com/ops4life/github-repo-template/compare/v1.13.2...v1.14.0) (2026-01-17)
 
 
