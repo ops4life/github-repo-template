@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.16.0](https://github.com/ops4life/github-repo-template/compare/v1.15.0...v1.16.0) (2026-02-03)
+
+
+### Features
+
+* remove deprecated extension ([60bdcb9](https://github.com/ops4life/github-repo-template/commit/60bdcb9c7dd518eb1bf36fb08ca518b57ade899c))
+
 # [1.15.0](https://github.com/ops4life/github-repo-template/compare/v1.14.0...v1.15.0) (2026-01-23)
 
 
