@@ -7,3 +7,6 @@ CODEOWNERS
 LICENSE
 README.md
 CLAUDE.md
+docs/**
+mkdocs.yml
+requirements.txt
