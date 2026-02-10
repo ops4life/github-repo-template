@@ -9,18 +9,10 @@ on:
       - 'mkdocs.yml'
       - 'requirements.txt'
       - '.github/workflows/docs-deploy.yaml'
-  pull_request:
-    branches:
-      - main
-    paths:
-      - 'docs/**'
-      - 'mkdocs.yml'
-      - 'requirements.txt'
-      - '.github/workflows/docs-deploy.yaml'
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -68,6 +60,20 @@ jobs:
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
+
+      - name: Commit URL changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          # Check if there are any changes to commit
+          if ! git diff --quiet; then
+            git add mkdocs.yml README.md docs/
+            git commit -m "chore(docs): auto-update repository URLs [skip ci]"
+            git push
+          else
+            echo "No URL changes to commit"
+          fi
 
       - name: Build documentation
         run: |
