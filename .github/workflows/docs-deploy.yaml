@@ -42,6 +42,29 @@ jobs:
         run: |
           pip install -r requirements.txt
 
+      - name: Configure repository URLs
+        run: |
+          # Extract repository name from GITHUB_REPOSITORY (owner/repo)
+          REPO_NAME="${GITHUB_REPOSITORY}"
+          REPO_OWNER="${GITHUB_REPOSITORY_OWNER}"
+
+          # Update mkdocs.yml with actual repository information
+          sed -i "s|site_url: https://username.github.io/github-repo-template/|site_url: https://${REPO_OWNER}.github.io/${GITHUB_REPOSITORY#*/}/|g" mkdocs.yml
+          sed -i "s|repo_name: username/github-repo-template|repo_name: ${REPO_NAME}|g" mkdocs.yml
+          sed -i "s|repo_url: https://github.com/username/github-repo-template|repo_url: https://github.com/${REPO_NAME}|g" mkdocs.yml
+          sed -i "s|edit_uri: edit/main/docs/|edit_uri: edit/main/docs/|g" mkdocs.yml
+
+          # Update social links
+          sed -i "s|link: https://github.com/username/github-repo-template|link: https://github.com/${REPO_NAME}|g" mkdocs.yml
+
+          # Update documentation files with actual repository information
+          find docs -type f -name "*.md" -exec sed -i "s|https://github.com/username/github-repo-template|https://github.com/${REPO_NAME}|g" {} +
+          find docs -type f -name "*.md" -exec sed -i "s|username.github.io/github-repo-template|${REPO_OWNER}.github.io/${GITHUB_REPOSITORY#*/}|g" {} +
+          find docs -type f -name "*.md" -exec sed -i "s|username/github-repo-template|${REPO_NAME}|g" {} +
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
+
       - name: Build documentation
         run: |
           mkdocs build --strict
