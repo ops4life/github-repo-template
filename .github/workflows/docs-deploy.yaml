@@ -61,6 +61,10 @@ jobs:
           find docs -type f -name "*.md" -exec sed -i "s|https://github.com/username/github-repo-template|https://github.com/${REPO_NAME}|g" {} +
           find docs -type f -name "*.md" -exec sed -i "s|username.github.io/github-repo-template|${REPO_OWNER}.github.io/${GITHUB_REPOSITORY#*/}|g" {} +
           find docs -type f -name "*.md" -exec sed -i "s|username/github-repo-template|${REPO_NAME}|g" {} +
+
+          # Update README.md with actual repository information
+          sed -i "s|https://username.github.io/github-repo-template/|https://${REPO_OWNER}.github.io/${GITHUB_REPOSITORY#*/}/|g" README.md
+          sed -i "s|username.github.io/github-repo-template|${REPO_OWNER}.github.io/${GITHUB_REPOSITORY#*/}|g" README.md
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
