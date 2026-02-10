@@ -1,0 +1,195 @@
+/* Custom styles for GitHub Repo Template documentation */
+
+/* Improve code block appearance */
+.highlight {
+  border-radius: 0.25rem;
+}
+
+/* Better spacing for admonitions */
+.admonition {
+  margin: 1.5rem 0;
+}
+
+/* Style for version badges */
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.6em;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+}
+
+/* Table improvements */
+table {
+  font-size: 0.9em;
+}
+
+table th {
+  background-color: var(--md-default-fg-color--lightest);
+}
+
+/* Responsive tables */
+@media screen and (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+/* Code inline styling */
+code {
+  padding: 0.1em 0.3em;
+  border-radius: 0.2em;
+}
+
+/* Improve keyboard key styling */
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: var(--md-code-fg-color);
+  vertical-align: middle;
+  background-color: var(--md-code-bg-color);
+  border: solid 1px var(--md-default-fg-color--lightest);
+  border-bottom-color: var(--md-default-fg-color--light);
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 var(--md-default-fg-color--lightest);
+}
+
+/* Better link styling in tables */
+table a {
+  text-decoration: underline;
+}
+
+/* Improve navigation */
+.md-nav__link--active {
+  font-weight: 600;
+}
+
+/* Custom styling for workflow status indicators */
+.workflow-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.workflow-status::before {
+  content: "●";
+  font-size: 1.2em;
+}
+
+.workflow-status.success::before {
+  color: #2ea44f;
+}
+
+.workflow-status.warning::before {
+  color: #fb8500;
+}
+
+.workflow-status.error::before {
+  color: #d73a49;
+}
+
+/* Better spacing for lists */
+.md-typeset ul,
+.md-typeset ol {
+  margin-left: 0.5em;
+}
+
+/* Improve nested list spacing */
+.md-typeset li > ul,
+.md-typeset li > ol {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Custom styling for tabbed content */
+.tabbed-set {
+  margin: 1.5rem 0;
+}
+
+/* Improve search results */
+.md-search-result__article {
+  padding: 0.8rem;
+}
+
+/* Better footer spacing */
+.md-footer-meta {
+  background-color: var(--md-footer-bg-color);
+}
+
+/* Responsive images */
+.md-typeset img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+}
+
+/* Custom styling for mermaid diagrams */
+.mermaid {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+/* Improve blockquote styling */
+.md-typeset blockquote {
+  border-left: 4px solid var(--md-accent-fg-color);
+  padding-left: 1rem;
+}
+
+/* Better spacing for headers in content */
+.md-typeset h2 {
+  margin-top: 2em;
+}
+
+.md-typeset h3 {
+  margin-top: 1.5em;
+}
+
+/* Print styles */
+@media print {
+  .md-header,
+  .md-sidebar,
+  .md-footer {
+    display: none;
+  }
+
+  .md-content {
+    max-width: 100%;
+  }
+}
+
+/* Dark mode adjustments */
+[data-md-color-scheme="slate"] {
+  --md-code-bg-color: #1e1e1e;
+}
+
+[data-md-color-scheme="slate"] table th {
+  background-color: #2d2d2d;
+}
+
+/* Accessibility improvements */
+.md-typeset a:focus {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
+/* Skip to content link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}

@@ -33,3 +33,12 @@ repos:
     hooks:
       - id: yamllint
         args: [--format, parsable]
+
+  - repo: local
+    hooks:
+      - id: mkdocs-build
+        name: MkDocs Build
+        entry: mkdocs build --strict
+        language: system
+        files: ^(docs/|mkdocs\.yml|requirements\.txt)
+        pass_filenames: false

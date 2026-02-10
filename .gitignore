@@ -70,6 +70,10 @@ dist/
 *.min.js
 *.min.css
 
+# MkDocs
+site/
+.mkdocs_cache/
+
 # Environment variables
 .env
 .env.local
