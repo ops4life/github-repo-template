@@ -64,10 +64,10 @@ This template saves you hours of setup time by providing:
 
 ## Support
 
-- **Questions** - Open a [Discussion](https://github.com/username/github-repo-template/discussions)
-- **Bug Reports** - Open an [Issue](https://github.com/username/github-repo-template/issues/new?template=bug_report.md)
+- **Questions** - Open a [Discussion](https://github.com/ops4life/github-repo-template/discussions)
+- **Bug Reports** - Open an [Issue](https://github.com/ops4life/github-repo-template/issues/new?template=bug_report.md)
 - **Security** - See our [Security Policy](guides/security.md)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/username/github-repo-template/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/ops4life/github-repo-template/blob/main/LICENSE) file for details.

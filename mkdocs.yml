@@ -1,10 +1,10 @@
 site_name: GitHub Repo Template
 site_description: A language-agnostic GitHub repository template with comprehensive CI/CD automation
 site_author: GitHub Community
-site_url: https://username.github.io/github-repo-template/
+site_url: https://ops4life.github.io/github-repo-template/
 
-repo_name: username/github-repo-template
-repo_url: https://github.com/username/github-repo-template
+repo_name: ops4life/github-repo-template
+repo_url: https://github.com/ops4life/github-repo-template
 edit_uri: edit/main/docs/
 
 theme:
@@ -95,4 +95,4 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/username/github-repo-template
+      link: https://github.com/ops4life/github-repo-template

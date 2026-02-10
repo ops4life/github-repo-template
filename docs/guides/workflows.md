@@ -612,4 +612,4 @@ git commit --amend
 
 ---
 
-**Questions?** Open a [discussion](https://github.com/username/github-repo-template/discussions) or [issue](https://github.com/username/github-repo-template/issues).
+**Questions?** Open a [discussion](https://github.com/ops4life/github-repo-template/discussions) or [issue](https://github.com/ops4life/github-repo-template/issues).

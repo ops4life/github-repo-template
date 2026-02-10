@@ -1,10 +1,10 @@
 # 🛠️ GitHub Repo Template
 
-[![Documentation](https://img.shields.io/badge/docs-GitHub%20Pages-blue?style=flat-square)](https://username.github.io/github-repo-template/)
+[![Documentation](https://img.shields.io/badge/docs-GitHub%20Pages-blue?style=flat-square)](https://ops4life.github.io/github-repo-template/)
 
 Welcome to the Template Repository on GitHub! This repository is designed to serve as a starting point for creating new Git repositories with best practices and configurations already set up.
 
-📚 **[View Full Documentation](https://username.github.io/github-repo-template/)** - Comprehensive guides, tutorials, and API reference
+📚 **[View Full Documentation](https://ops4life.github.io/github-repo-template/)** - Comprehensive guides, tutorials, and API reference
 
 Below is a brief overview of the structure and the purpose of each file and directory in this repository.
 

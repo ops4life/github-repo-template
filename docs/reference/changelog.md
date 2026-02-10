@@ -72,7 +72,7 @@ The current changelog is maintained in the root `CHANGELOG.md` file. Below is a 
 ---
 
 !!! tip "View Full Changelog"
-    View the complete changelog in the [`CHANGELOG.md`](https://github.com/username/github-repo-template/blob/main/CHANGELOG.md) file in the repository root.
+    View the complete changelog in the [`CHANGELOG.md`](https://github.com/ops4life/github-repo-template/blob/main/CHANGELOG.md) file in the repository root.
 
 ## Understanding Versions
 
@@ -412,4 +412,4 @@ Configure beta/alpha branches in `.releaserc.json`:
 
 ---
 
-**Questions?** Open a [discussion](https://github.com/username/github-repo-template/discussions).
+**Questions?** Open a [discussion](https://github.com/ops4life/github-repo-template/discussions).

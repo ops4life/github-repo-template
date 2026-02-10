@@ -231,8 +231,8 @@ brew install pre-commit
 ## Get Help
 
 - 📚 **[Full Documentation](index.md)**
-- 💬 **[Discussions](https://github.com/username/github-repo-template/discussions)**
-- 🐛 **[Report Issues](https://github.com/username/github-repo-template/issues)**
+- 💬 **[Discussions](https://github.com/ops4life/github-repo-template/discussions)**
+- 🐛 **[Report Issues](https://github.com/ops4life/github-repo-template/issues)**
 
 ---
 

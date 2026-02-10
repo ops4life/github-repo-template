@@ -28,7 +28,7 @@ Before using this template, ensure you have:
 
 ### Step 1: Use This Template
 
-1. Navigate to the [template repository](https://github.com/username/github-repo-template)
+1. Navigate to the [template repository](https://github.com/ops4life/github-repo-template)
 2. Click the **"Use this template"** button at the top right
 3. Select **"Create a new repository"**
 4. Choose an owner and repository name
@@ -192,6 +192,6 @@ pre-commit autoupdate
 
 ## Getting Help
 
-- **Documentation Issues** - [Report here](https://github.com/username/github-repo-template/issues/new?template=documentation.md)
-- **Questions** - [Start a discussion](https://github.com/username/github-repo-template/discussions)
-- **Bugs** - [File a bug report](https://github.com/username/github-repo-template/issues/new?template=bug_report.md)
+- **Documentation Issues** - [Report here](https://github.com/ops4life/github-repo-template/issues/new?template=documentation.md)
+- **Questions** - [Start a discussion](https://github.com/ops4life/github-repo-template/discussions)
+- **Bugs** - [File a bug report](https://github.com/ops4life/github-repo-template/issues/new?template=bug_report.md)

@@ -747,4 +747,4 @@ src/**
 
 ---
 
-**Questions?** Open a [discussion](https://github.com/username/github-repo-template/discussions).
+**Questions?** Open a [discussion](https://github.com/ops4life/github-repo-template/discussions).
