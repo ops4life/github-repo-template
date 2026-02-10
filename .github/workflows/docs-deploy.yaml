@@ -9,14 +9,6 @@ on:
       - 'mkdocs.yml'
       - 'requirements.txt'
       - '.github/workflows/docs-deploy.yaml'
-  pull_request:
-    branches:
-      - main
-    paths:
-      - 'docs/**'
-      - 'mkdocs.yml'
-      - 'requirements.txt'
-      - '.github/workflows/docs-deploy.yaml'
   workflow_dispatch:
 
 permissions:
