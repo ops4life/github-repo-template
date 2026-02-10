@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.17.0](https://github.com/ops4life/github-repo-template/compare/v1.16.0...v1.17.0) (2026-02-10)
+
+
+### Features
+
+* **docs:** add MkDocs documentation with GitHub Pages deployment ([#5](https://github.com/ops4life/github-repo-template/issues/5)) ([46e3466](https://github.com/ops4life/github-repo-template/commit/46e3466544daf2fc9b3682b332a03d04e4f7b632))
+
 # [1.16.0](https://github.com/ops4life/github-repo-template/compare/v1.15.0...v1.16.0) (2026-02-03)
 
 
