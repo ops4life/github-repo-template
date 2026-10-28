@@ -6,6 +6,7 @@ repos:
         args: [--markdown-linebreak-ext=md]
       - id: end-of-file-fixer
       - id: check-yaml
+        args: [--unsafe]  # mkdocs.yml uses python/name tags
       - id: check-json
       - id: check-toml
       - id: check-merge-conflict
