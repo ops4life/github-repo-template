@@ -5,7 +5,7 @@ This guide will help you understand how to use this template to create new repos
 ## What You Get
 
 When you use this template, you get a fully configured repository with:
-  
+
 - ✅ 12 automated GitHub Actions workflows
 - ✅ Secret scanning with Gitleaks
 - ✅ Security analysis with CodeQL
