@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.17.2](https://github.com/ops4life/github-repo-template/compare/v1.17.1...v1.17.2) (2026-11-07)
+
+
+### Bug Fixes
+
+* **ci:** install requirements.txt so the mkdocs pre-commit hook can run ([#48](https://github.com/ops4life/github-repo-template/issues/48)) ([7b08c20](https://github.com/ops4life/github-repo-template/commit/7b08c200a2377ea53f45e358deadbb1ad902da7d))
+* **ci:** make gitleaks, pre-commit and infracost work on Dependabot runs ([#43](https://github.com/ops4life/github-repo-template/issues/43)) ([9524464](https://github.com/ops4life/github-repo-template/commit/95244649a333a416955eb029461896878cc9c015))
+* **release:** push release commits with the ops4life-otto App token ([dbf7f5c](https://github.com/ops4life/github-repo-template/commit/dbf7f5cbb312af9a73dcbd20fc1d8a71394ce450))
+* **release:** use semantic-release 24, required by semantic-release-action v8 ([3dbdc77](https://github.com/ops4life/github-repo-template/commit/3dbdc778510963b006b4fce71ffd6fe43d839138))
+* update mkdocs workflow ([#7](https://github.com/ops4life/github-repo-template/issues/7)) ([82f4667](https://github.com/ops4life/github-repo-template/commit/82f4667242318a165b64bb4e0ab8e6de683ce353))
+
 ## [1.17.1](https://github.com/ops4life/github-repo-template/compare/v1.17.0...v1.17.1) (2026-02-10)
 
 
