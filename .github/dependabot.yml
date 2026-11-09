@@ -8,3 +8,9 @@ updates:
     commit-message:
       prefix: "chore"
       include: "scope"
+    # Minor/patch updates in one PR; majors stay separate for manual review.
+    groups:
+      github-actions-minor-patch:
+        update-types:
+          - "minor"
+          - "patch"
