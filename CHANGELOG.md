@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.17.3](https://github.com/ops4life/github-repo-template/compare/v1.17.2...v1.17.3) (2026-11-09)
+
+
+### Bug Fixes
+
+* run pre-commit-ci on the PR head and make hooks pass on main ([#53](https://github.com/ops4life/github-repo-template/issues/53)) ([082b9c6](https://github.com/ops4life/github-repo-template/commit/082b9c68254733452a66ee9526ae9f95d574b00e))
+
 ## [1.17.2](https://github.com/ops4life/github-repo-template/compare/v1.17.1...v1.17.2) (2026-11-07)
 
 
