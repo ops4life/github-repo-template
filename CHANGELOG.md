@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.18.0](https://github.com/ops4life/github-repo-template/compare/v1.17.3...v1.18.0) (2026-11-09)
+
+
+### Features
+
+* **ci:** merge minor/patch Dependabot PRs as ops4life-otto after required checks pass ([#56](https://github.com/ops4life/github-repo-template/issues/56)) ([b6e4553](https://github.com/ops4life/github-repo-template/commit/b6e4553d55970ff45d41e7610dee47306183dd7d))
+
 ## [1.17.3](https://github.com/ops4life/github-repo-template/compare/v1.17.2...v1.17.3) (2026-11-09)
 
 
