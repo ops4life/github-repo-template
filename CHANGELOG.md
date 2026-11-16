@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.18.1](https://github.com/ops4life/github-repo-template/compare/v1.18.0...v1.18.1) (2026-11-16)
+
+
+### Bug Fixes
+
+* **ci:** use Python 3.12, full fetch depth and mkdocs-material 9.7.7 ([#60](https://github.com/ops4life/github-repo-template/issues/60)) ([d94af04](https://github.com/ops4life/github-repo-template/commit/d94af04c01a0862a35c4aad4038d0d482ce43852))
+
 # [1.18.0](https://github.com/ops4life/github-repo-template/compare/v1.17.3...v1.18.0) (2026-11-09)
 
 
